@@ -9,10 +9,9 @@
     {
       "@context": "https://schema.org",
       "@type": "NGO",
-      "name": "Applied Pragmatic Social Action",
+      "name": "Applied & Pragmatic Social Action Limited",
       "alternateName": "APSA",
       "url": "https://appliedpragmaticsocialaction.github.io",
-      "logo": "/assets/logo.png",
       "description": "A Ugandan non-profit organization focused on pragmatic, data-informed social change through community partnership.",
       "founder": {
         "@type": "Person",
@@ -21,7 +20,8 @@
       },
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Kampala",
+        "streetAddress": "Namave",
+        "addressLocality": "Mukono",
         "addressCountry": "UG"
       },
       "contactPoint": {
@@ -29,8 +29,14 @@
         "contactType": "general inquiries",
         "email": "appliedpragmaticsocialaction@gmail.com"
       },
-      "sameAs": [],
-      "knowsAbout": ["Social Impact", "Community Development", "Pragmatic Solutions"]
+      "member": [
+        {"@type": "Person", "name": "Sande Andrew"},
+        {"@type": "Person", "name": "Ochieng Henry Neondo"},
+        {"@type": "Person", "name": "Ssentumbwe Hammim"},
+        {"@type": "Person", "name": "Lubia Mariam Brinah"},
+        {"@type": "Person", "name": "Nakiberu Rose"}
+      ],
+      "knowsAbout": ["Climate-Smart Agriculture", "Water and Sanitation", "Environmental Conservation", "Just Energy Transition", "Disaster Relief", "Rural Empowerment"]
     }
     </script>
 
@@ -250,6 +256,34 @@
             margin: 2rem 0;
         }
 
+        /* Governance Section */
+        .governance-section {
+            background-color: #f9fbfa;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .team-member {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .team-member h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--ink);
+        }
+
+        .team-member span {
+            font-size: 0.9rem;
+            color: var(--grey-text);
+        }
+
         /* Footer */
         footer {
             background-color: var(--ink);
@@ -343,6 +377,7 @@
         <ul class="nav-links">
             <li><a href="#mission">Mission</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#governance">Governance</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         <a href="#contact" class="btn" style="padding: 0.5rem 1.2rem; font-size: 0.9rem;">Partner With Us</a>
@@ -356,9 +391,9 @@
                 <span class="hero-tagline">Pragmatic. Measurable. Local.</span>
                 <h1 id="hero-heading">Building Lasting Change Through Applied Action</h1>
                 <p class="hero-subtext">
-                    [Placeholder: Insert your core value proposition here. Example: "We bridge the gap between policy and practice, delivering tangible improvements to communities in Uganda."]
+                    We bridge the gap between policy and practice, delivering tangible improvements to communities in Uganda through climate-smart agriculture, clean water access, and sustainable energy transitions.
                 </p>
-                <a href="#programs" class="btn">View Our Work</a>
+                <a href="#mission" class="btn">Explore Our Work</a>
             </div>
             <div>
                 <!-- Placeholder for a high-quality hero image -->
@@ -370,24 +405,39 @@
     <section id="mission" class="mission-section section-padding" aria-labelledby="mission-heading">
         <div class="container">
             <div class="mission-header">
-                <h2 id="mission-heading">Our Approach</h2>
-                <p style="margin-inline: auto; text-align: center;">[Placeholder: Briefly explain why you chose a "pragmatic" approach. What makes your methodology different from traditional NGOs?]</p>
+                <h2 id="mission-heading">Our Core Objectives</h2>
+                <p style="margin-inline: auto; text-align: center;">Driven by a commitment to practical solutions, we focus on six key areas of impact.</p>
             </div>
             <div class="pillars-grid">
                 <article class="pillar-card">
                     <span class="pillar-number">01</span>
-                    <h3>Community-Led</h3>
-                    <p>[Placeholder: Explain how local voices drive your project design and implementation.]</p>
+                    <h3>Climate-Smart Agriculture</h3>
+                    <p>Raising agricultural production through skills building and adopting a village concept to ensure food security and economic resilience.</p>
                 </article>
                 <article class="pillar-card">
                     <span class="pillar-number">02</span>
-                    <h3>Data-Informed</h3>
-                    <p>[Placeholder: Mention your commitment to measuring impact and adapting strategies based on evidence.]</p>
+                    <h3>Clean Water and Sanitation</h3>
+                    <p>Improving community access to clean, safe water and sanitation facilities to reduce disease burden and improve quality of life.</p>
                 </article>
-                <article class="pillar-card">
+                 <article class="pillar-card">
                     <span class="pillar-number">03</span>
-                    <h3>Sustainable</h3>
-                    <p>[Placeholder: Discuss how your projects are designed to remain viable after your direct involvement ends.]</p>
+                    <h3>Local Climate Action</h3>
+                    <p>Catalysing community-led environmental initiatives that enhance climate action at the local level, fostering stewardship and sustainability.</p>
+                </article>
+                 <article class="pillar-card">
+                    <span class="pillar-number">04</span>
+                    <h3>Just Energy Transition</h3>
+                    <p>Empowering communities to navigate the transition to cleaner energy sources, ensuring equitable access and local benefit.</p>
+                </article>
+                 <article class="pillar-card">
+                    <span class="pillar-number">05</span>
+                    <h3>Disaster Relief</h3>
+                    <p>Quickly mobilising support for disaster relief efforts, with a specific focus on protecting and supporting older women and men.</p>
+                </article>
+                 <article class="pillar-card">
+                    <span class="pillar-number">06</span>
+                    <h3>Rural Voice</h3>
+                    <p>Empowering rural community voices to participate effectively in governance and demand better service delivery.</p>
                 </article>
             </div>
         </div>
@@ -397,11 +447,11 @@
         <div class="container about-grid">
             <div>
                 <h2 id="about-heading">Meet the Founder</h2>
-                <p>[Placeholder: Write a compelling bio for Andrew Sande. Focus on his motivation, relevant experience, and leadership philosophy. Why did he start APSA?]</p>
+                <p>Founded by <strong>Andrew Sande</strong>, APSA was established to move beyond theoretical discourse and implement actionable, on-the-ground solutions for some of Uganda's most pressing challenges.</p>
                 <blockquote class="founder-quote">
-                    "[Placeholder: Insert a powerful quote from Andrew that encapsulates the spirit of the organization.]"
+                    "We believe that lasting change doesn't come from distant policies, but from applied action rooted in local reality."
                 </blockquote>
-                <p>[Placeholder: Continue bio or mention key team members/advisors here.]</p>
+                <p>Based in Namave, Mukono, our team combines local knowledge with pragmatic strategy to drive measurable impact.</p>
             </div>
             <div>
                  <img src="https://via.placeholder.com/500x600/f0f0f0/555555?text=Founder+Photo" alt="Portrait of Andrew Sande, Founder of APSA" style="width: 100%; border-radius: 8px;">
@@ -409,7 +459,37 @@
         </div>
     </section>
 
-    <section id="contact" class="section-padding" style="background-color: #f9fbfa; text-align: center;" aria-labelledby="contact-heading">
+    <section id="governance" class="governance-section section-padding" aria-labelledby="governance-heading">
+        <div class="container">
+            <h2 id="governance-heading">Transparency and Governance</h2>
+            <p>Applied and Pragmatic Social Action Limited is registered as a Company Limited by Guarantee under The Companies Act, Cap 106 of the Republic of Uganda. We are committed to financial integrity and democratic governance.</p>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <h4>Sande Andrew</h4>
+                    <span>Founder</span>
+                </div>
+                <div class="team-member">
+                    <h4>Ochieng Henry Neondo</h4>
+                    <span>Founding Member</span>
+                </div>
+                <div class="team-member">
+                    <h4>Ssentumbwe Hammim</h4>
+                    <span>Founding Member</span>
+                </div>
+                <div class="team-member">
+                    <h4>Lubia Mariam Brinah</h4>
+                    <span>Founding Member</span>
+                </div>
+                <div class="team-member">
+                    <h4>Nakiberu Rose</h4>
+                    <span>Founding Member</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding" style="background-color: #fff; text-align: center;" aria-labelledby="contact-heading">
         <div class="container">
             <h2 id="contact-heading">Let's Build Together</h2>
             <p style="margin: 1rem auto 2.5rem;">Whether you are a donor, partner, or volunteer, we would love to hear from you.</p>
@@ -430,6 +510,7 @@
                 <ul class="footer-list">
                     <li><a href="#mission">Mission</a></li>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#governance">Governance</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -437,15 +518,16 @@
                 <h3 class="footer-heading">Connect</h3>
                 <ul class="footer-list">
                     <li><a href="mailto:appliedpragmaticsocialaction@gmail.com">Email Us</a></li>
-                    <li>Kampala, Uganda</li>
+                    <li>Namave, Mukono, Uganda</li>
                 </ul>
             </div>
         </div>
         <div class="copyright">
-            © 2026 Applied Pragmatic Social Action. All Rights Reserved.
+            © 2026 Applied Pragmatic Social Action Limited. All Rights Reserved.
         </div>
     </div>
 </footer>
+
 
 
 </body></html>
