@@ -59,6 +59,10 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: var(--font-body);
             color: var(--ink);
@@ -129,12 +133,15 @@
             padding: 0 5%;
         }
 
-        .logo {
-            font-family: var(--font-display);
-            font-size: 1.25rem;
-            font-weight: bold;
-            letter-spacing: -0.5px;
-            color: var(--ink);
+        .logo-link {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            height: 40px;
+            width: auto;
+            display: block;
         }
 
         .nav-links {
@@ -149,6 +156,37 @@
             font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+        }
+
+        /* Hamburger button (hidden on desktop) */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            z-index: 1100;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 26px;
+            height: 3px;
+            background-color: var(--ink);
+            margin: 5px 0;
+            border-radius: 2px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        /* When the menu is open, turn the hamburger into an X */
+        .menu-toggle.active span:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .menu-toggle.active span:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
         }
 
         .btn {
@@ -350,10 +388,6 @@
                 grid-template-columns: 1fr;
             }
             
-            .nav-links {
-                display: none; /* Simplified mobile nav */
-            }
-
             .section-padding {
                 padding: 4rem 0;
             }
@@ -366,6 +400,46 @@
             .hero-subtext {
                 margin-inline: auto;
             }
+
+            /* Show the hamburger button on mobile */
+            .menu-toggle {
+                display: block;
+            }
+
+            /* Hide the inline nav links and the Partner button */
+            .nav-links,
+            .nav-cta {
+                display: none;
+            }
+
+            /* When opened, show the menu as a dropdown panel */
+            .nav-links.open {
+                display: flex;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: var(--paper);
+                border-bottom: 1px solid var(--border);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            }
+
+            .nav-links.open li {
+                border-top: 1px solid var(--border);
+            }
+
+            .nav-links.open a {
+                display: block;
+                padding: 1.2rem 5%;
+                font-size: 1.05rem;
+            }
+
+            .nav-links.open .mobile-cta a {
+                color: var(--accent);
+                font-weight: 600;
+            }
         }
     </style>
 </head>
@@ -373,16 +447,22 @@
 
 <header>
     <nav aria-label="Main Navigation">
-        <a href="/" aria-label="Home">
-            <img src="/APSA%20Logo.jpeg" alt="APSA Logo" style="height: 40px; width: auto;">
+        <a href="#" class="logo-link" aria-label="Back to top">
+            <img src="/APSA%20Logo.jpeg" alt="APSA Logo" class="logo-img">
         </a>
-        <ul class="nav-links">
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
             <li><a href="#mission">Mission</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#governance">Governance</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li class="mobile-cta"><a href="#contact">Partner With Us</a></li>
         </ul>
-        <a href="#contact" class="btn" style="padding: 0.5rem 1.2rem; font-size: 0.9rem;">Partner With Us</a>
+        <a href="#contact" class="btn nav-cta" style="padding: 0.5rem 1.2rem; font-size: 0.9rem;">Partner With Us</a>
     </nav>
 </header>
 
@@ -393,7 +473,7 @@
                 <span class="hero-tagline">Pragmatic. Measurable. Local.</span>
                 <h1 id="hero-heading">Building Resilient Communities Through Pragmatic Action</h1>
                 <p class="hero-subtext">
-                    We deliver sustainable solutions in Agriculture, Water & Sanitation, Environment & Climate, Energy, Disaster Relief for the Elderly, and Advocacy — because action matters most in times of crisis.
+                    We deliver sustainable solutions in Agriculture, Water &amp; Sanitation, Environment &amp; Climate, Energy, Disaster Relief for the Elderly, and Advocacy — because action matters most in times of crisis.
                 </p>
                 <a href="#mission" class="btn">Explore Our Work</a>
             </div>
@@ -460,8 +540,7 @@
                 <blockquote class="founder-quote">
                     "Through journalism, activism, and community programs, I continue to push for pragmatic solutions that protect people, the environment, and the most vulnerable."
                 </blockquote>
-
-                </div>
+            </div>
             <div>
                 <img src="/Andrew%20Sande%20photo%201.jpeg" alt="Portrait of Andrew Sande, Founder of APSA" style="width: 100%; border-radius: 8px;">
             </div>
@@ -537,6 +616,26 @@
     </div>
 </footer>
 
+<script>
+    // Toggle the mobile menu open and closed
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
 
+    menuToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('open');
+        const isOpen = navLinks.classList.contains('open');
+        menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        menuToggle.classList.toggle('active', isOpen);
+    });
+
+    // Close the menu automatically when a link is tapped
+    navLinks.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+            navLinks.classList.remove('open');
+            menuToggle.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        });
+    });
+</script>
 
 </body></html>
