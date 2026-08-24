@@ -1,4 +1,7 @@
-<html lang="en"><head>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Applied Pragmatic Social Action | Practical Solutions for Lasting Change</title>
@@ -236,6 +239,22 @@
             color: var(--grey-text);
         }
 
+        /* Privacy-preserving hero placeholder (no external requests) */
+        .hero-placeholder {
+            width: 100%;
+            aspect-ratio: 3/2;
+            background: linear-gradient(135deg, var(--accent-light) 0%, #d4ede6 100%);
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+
         /* Mission Section */
         .mission-section {
             background-color: var(--accent-light);
@@ -448,7 +467,7 @@
 <header>
     <nav aria-label="Main Navigation">
         <a href="#" class="logo-link" aria-label="Back to top">
-            <img src="/APSA%20Logo.jpeg" alt="APSA Logo" class="logo-img">
+            <img src="./APSA%20Logo.jpeg" alt="APSA Logo" class="logo-img">
         </a>
         <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
             <span></span>
@@ -479,8 +498,10 @@
                 <a href="#mission" class="btn">Explore Our Work</a>
             </div>
             <div>
-                <!-- Placeholder for a high-quality hero image -->
-                <img src="https://via.placeholder.com/600x400/e8f5f1/005f4b?text=Community+Action" alt="Placeholder for community action photo" style="width: 100%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <!-- Privacy-preserving CSS-only placeholder (replaces external via.placeholder.com) -->
+                <div class="hero-placeholder" role="img" aria-label="Placeholder for community action photo">
+                    Community Action
+                </div>
             </div>
         </div>
     </section>
@@ -527,49 +548,47 @@
     </section>
 
     <section id="about" class="section-padding" aria-labelledby="about-heading">
-        <section id="about" class="section-padding" aria-labelledby="about-heading">
-    <div class="container" style="max-width: 900px;">
-        <h2 id="about-heading" style="text-align: center; margin-bottom: 2rem;">Welcome to APSA — Applied Pragmatic Social Action</h2>
+        <div class="container" style="max-width: 900px;">
+            <h2 id="about-heading" style="text-align: center; margin-bottom: 2rem;">Welcome to APSA — Applied Pragmatic Social Action</h2>
 
-        <p><strong>Welcome to Applied Pragmatic Social Action (APSA) — Where Pragmatic Action Builds Resilient Communities.</strong></p>
+            <p><strong>Welcome to Applied Pragmatic Social Action (APSA) — Where Pragmatic Action Builds Resilient Communities.</strong></p>
 
-        <p>We are glad you are here.</p>
+            <p>We are glad you are here.</p>
 
-        <p>In a world facing climate crisis, food insecurity, water challenges, and deep inequality, APSA was born from a simple but powerful conviction: <em>"No one should be left behind."</em></p>
+            <p>In a world facing climate crisis, food insecurity, water challenges, and deep inequality, APSA was born from a simple but powerful conviction: <em>"No one should be left behind."</em></p>
 
-        <p>APSA is a community-driven organization founded in Uganda by journalist and climate activist <strong>Andrew Sande</strong>, together with Kenyan journalist <strong>Henry Nendo</strong> and three other colleagues. We exist to turn ideas into practical, on-the-ground action.</p>
+            <p>APSA is a community-driven organization founded in Uganda by journalist and climate activist <strong>Andrew Sande</strong>, together with Kenyan journalist <strong>Henry Nendo</strong> and three other colleagues. We exist to turn ideas into practical, on-the-ground action.</p>
 
-        <h3 style="margin-top: 2rem;">What We Do</h3>
-        <p>We don't just talk about change — we do it. Our work focuses on six key pillars for community resilience:</p>
+            <h3 style="margin-top: 2rem;">What We Do</h3>
+            <p>We don't just talk about change — we do it. Our work focuses on six key pillars for community resilience:</p>
 
-        <ul style="line-height: 2;">
-            <li><strong>Agriculture:</strong> Promoting climate-smart farming for food security.</li>
-            <li><strong>Water &amp; Sanitation:</strong> Ensuring access to clean water and healthy environments.</li>
-            <li><strong>Environmental Conservation &amp; Climate Change:</strong> From emergency clean-ups to climate education, including for deaf communities through sign language.</li>
-            <li><strong>Clean Energy:</strong> Advocating for affordable, sustainable energy solutions.</li>
-            <li><strong>Disaster Relief for the Elderly:</strong> Standing with our most vulnerable elders in times of crisis.</li>
-            <li><strong>Advocacy &amp; Journalism:</strong> Amplifying community voices through Africa Science News and grassroots mobilization.</li>
-        </ul>
+            <ul style="line-height: 2;">
+                <li><strong>Agriculture:</strong> Promoting climate-smart farming for food security.</li>
+                <li><strong>Water &amp; Sanitation:</strong> Ensuring access to clean water and healthy environments.</li>
+                <li><strong>Environmental Conservation &amp; Climate Change:</strong> From emergency clean-ups to climate education, including for deaf communities through sign language.</li>
+                <li><strong>Clean Energy:</strong> Advocating for affordable, sustainable energy solutions.</li>
+                <li><strong>Disaster Relief for the Elderly:</strong> Standing with our most vulnerable elders in times of crisis.</li>
+                <li><strong>Advocacy &amp; Journalism:</strong> Amplifying community voices through Africa Science News and grassroots mobilization.</li>
+            </ul>
 
-        <p>As the <strong>Uganda Country Representative for the African Coalition for Communities Responsive to Climate Change</strong> and a <strong>Certified Environmental and Water Sanitary Inspector</strong>, our team brings both passion and professional expertise.</p>
+            <p>As the <strong>Uganda Country Representative for the African Coalition for Communities Responsive to Climate Change</strong> and a <strong>Certified Environmental and Water Sanitary Inspector</strong>, our team brings both passion and professional expertise.</p>
 
-        <p>Whether you are a farmer, a student, a partner, a donor, or a fellow activist — <em>you belong here.</em> This is your platform to learn, to act, and to grow with us.</p>
+            <p>Whether you are a farmer, a student, a partner, a donor, or a fellow activist — <em>you belong here.</em> This is your platform to learn, to act, and to grow with us.</p>
 
-        <p>Thank you for visiting. Thank you for believing that small, pragmatic actions can create big, lasting change.</p>
+            <p>Thank you for visiting. Thank you for believing that small, pragmatic actions can create big, lasting change.</p>
 
-        <p style="font-weight: bold;">Karibu Sana. Welcome to the APSA family!</p>
+            <p style="font-weight: bold;">Karibu Sana. Welcome to the APSA family!</p>
 
-        <blockquote style="border-left: 4px solid var(--accent); padding-left: 1rem; font-style: italic; margin-top: 2rem;">
-            Building Resilience in a Crisis-Laden and Fast-Changing World.
-        </blockquote>
+            <blockquote style="border-left: 4px solid var(--accent); padding-left: 1rem; font-style: italic; margin-top: 2rem;">
+                Building Resilience in a Crisis-Laden and Fast-Changing World.
+            </blockquote>
 
-        <p style="text-align: center; margin-top: 2rem; font-style: italic;">"Welcome to APSA — We turn climate talk into climate action. Join us in building resilient communities across Uganda and Africa."</p>
-    </div>
-</section>
-        <div class="container about-grid">
+            <p style="text-align: center; margin-top: 2rem; font-style: italic;">"Welcome to APSA — We turn climate talk into climate action. Join us in building resilient communities across Uganda and Africa."</p>
+        </div>
+
+        <div class="container about-grid" style="margin-top: 4rem;">
             <div>
-                
-                <h2 id="about-heading">Meet the Founder</h2>
+                <h2>Meet the Founder</h2>
                 <p><strong>Andrew Sande</strong> is a Ugandan climate activist, journalist, and social change advocate based in Uganda. He currently works as a news reporter for <em>Africa Science News</em>, where he amplifies stories on science, environment, and community resilience.</p>
 
                 <p>Driven by the conviction that "no one should be left behind," Andrew founded <strong>Applied Pragmatic Social Action (APSA)</strong> together with journalist Henry Nyendo from Kenya and three other colleagues. APSA exists to build community resilience in a crisis-laden and fast-changing world through practical action in Agriculture, Water &amp; Sanitation, Environmental Conservation, Energy, Disaster Relief for the Elderly, and Advocacy.</p>
@@ -583,7 +602,7 @@
                 </blockquote>
             </div>
             <div>
-                <img src="/Andrew%20Sande%20photo%201.jpeg" alt="Portrait of Andrew Sande, Founder of APSA" style="width: 100%; border-radius: 8px;">
+                <img src="./Andrew%20Sande%20photo%201.jpeg" alt="Portrait of Andrew Sande, Founder of APSA" style="width: 100%; border-radius: 8px;">
             </div>
         </div>
     </section>
@@ -592,19 +611,19 @@
         <div class="container">
             <h2 id="governance-heading">Transparency and Governance</h2>
             <p>Applied and Pragmatic Social Action Limited is registered as a Company Limited by Guarantee under The Companies Act, Cap 106 of the Republic of Uganda. We are committed to financial integrity and democratic governance.</p>
- <div class="team-grid">
+             <div class="team-grid">
                 <div class="team-member">
-                    <img src="/Andrew%20Sande%20photo%201.jpeg" alt="Portrait of Sande Andrew, Founder" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; margin-bottom: 1rem;">
+                    <img src="./Andrew%20Sande%20photo%201.jpeg" alt="Portrait of Sande Andrew, Founder" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; margin-bottom: 1rem;">
                     <h4>Sande Andrew</h4>
                     <span>Founder</span>
                 </div>
                 <div class="team-member">
-                    <img src="/APSA%20Henry%20photo.jpeg" alt="Portrait of Ochieng Henry Neondo, Founding Member" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; margin-bottom: 1rem;">
+                    <img src="./APSA%20Henry%20photo.jpeg" alt="Portrait of Ochieng Henry Neondo, Founding Member" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; margin-bottom: 1rem;">
                     <h4>Ochieng Henry Neondo</h4>
                     <span>Founding Member</span>
                 </div>
                 <div class="team-member">
-                    <img src="/APSA%20Hammim%20photo.jpeg" alt="Portrait of Ssentumbwe Hammim, Founding Member" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; margin-bottom: 1rem;">
+                    <img src="./APSA%20Hammim%20photo.jpeg" alt="Portrait of Ssentumbwe Hammim, Founding Member" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; margin-bottom: 1rem;">
                     <h4>Ssentumbwe Hammim</h4>
                     <span>Founding Member</span>
                 </div>
@@ -613,7 +632,7 @@
                     <span>Founding Member</span>
                 </div>
                 <div class="team-member">
-                    <img src="/APSA%20Rose%20photo.jpeg" alt="Portrait of Nakiberu Rose, Founding Member" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; margin-bottom: 1rem;">
+                    <img src="./APSA%20Rose%20photo.jpeg" alt="Portrait of Nakiberu Rose, Founding Member" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; margin-bottom: 1rem;">
                     <h4>Nakiberu Rose</h4>
                     <span>Founding Member</span>
                 </div>
@@ -628,22 +647,22 @@
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
                 <figure style="margin: 0;">
-                    <img src="/ASPA%20Past%20actions%20(1).jpeg" alt="Group photo of volunteers and community members at the Emergency Cleanup &amp; Sanitation Workshop banner" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px;">
+                    <img src="./ASPA%20Past%20actions%20(1).jpeg" alt="Group photo of volunteers and community members at the Emergency Cleanup & Sanitation Workshop banner" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px;">
                 </figure>
                 <figure style="margin: 0;">
-                    <img src="/ASPA%20Past%20actions%20(2).jpeg" alt="Volunteer in high-visibility vest speaking with an elderly community member during the cleanup" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px;">
+                    <img src="./ASPA%20Past%20actions%20(2).jpeg" alt="Volunteer in high-visibility vest speaking with an elderly community member during the cleanup" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px;">
                 </figure>
                 <figure style="margin: 0;">
-                    <img src="/ASPA%20Past%20actions%20(3).jpeg" alt="Children observing a polluted drainage channel before cleanup" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px;">
+                    <img src="./ASPA%20Past%20actions%20(3).jpeg" alt="Children observing a polluted drainage channel before cleanup" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px;">
                 </figure>
                 <figure style="margin: 0;">
-                    <img src="/ASPA%20Past%20actions%20(4).jpeg" alt="Two volunteers clearing vegetation and waste from a waterway" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px;">
+                    <img src="./ASPA%20Past%20actions%20(4).jpeg" alt="Two volunteers clearing vegetation and waste from a waterway" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px;">
                 </figure>
                 <figure style="margin: 0;">
-                    <img src="/ASPA%20Past%20actions%20(5).jpeg" alt="Volunteers collecting debris into a wheelbarrow near a water facility" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px;">
+                    <img src="./ASPA%20Past%20actions%20(5).jpeg" alt="Volunteers collecting debris into a wheelbarrow near a water facility" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px;">
                 </figure>
                 <figure style="margin: 0;">
-                    <img src="/ASPA%20Past%20actions%20(6).jpeg" alt="Team working together to clear overgrown vegetation along a drainage canal" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px;">
+                    <img src="./ASPA%20Past%20actions%20(6).jpeg" alt="Team working together to clear overgrown vegetation along a drainage canal" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px;">
                 </figure>
             </div>
         </div>
@@ -734,4 +753,6 @@
     });
 </script>
 
-</body></html>
+</body>
+</html>
+
